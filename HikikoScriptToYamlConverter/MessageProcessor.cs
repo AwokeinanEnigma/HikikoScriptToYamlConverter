@@ -76,7 +76,8 @@ public class MessageProcessor
                         faceSet = fileName,
                         // a magic +2 to remove the colon and the space after it!
                         text = text.Substring(seperator + 2),
-                        name = name.Substring(0, potentialPortraitStart)
+                        // magic -1 to remove the space after the name
+                        name = name.Substring(0, potentialPortraitStart - 1)
                     };
                     return data;
                 }
